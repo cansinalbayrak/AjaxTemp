@@ -29,7 +29,7 @@ namespace AjaxTemp.Controllers
         public IActionResult GetData(string id)
         {
             var mydata = list.Find(x => x.Id == id);
-            return PartialView("_ExamplePatialView", mydata);
+            return PartialView("_ExamplePatialView", mydata); 
         }
 
         public IActionResult Privacy()

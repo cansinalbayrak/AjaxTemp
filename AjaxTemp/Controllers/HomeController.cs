@@ -25,6 +25,26 @@ namespace AjaxTemp.Controllers
         {
             return View(list);
         }
+        [HttpPost]
+        public IActionResult Update(Example example)
+        {
+            var ex = list.FirstOrDefault(e => e.Id == example.Id);
+
+            for (int i = 0;i<list.Count;i++) 
+            {
+                if (list[i].Id == ex.Id)
+                {
+                    list[i] = example;
+                }
+            }
+            return RedirectToAction("Index");
+        }
+        public IActionResult Delete(string id)
+        {
+            var ex = list.FirstOrDefault(e=>e.Id == id);
+            list.Remove(ex);
+            return RedirectToAction("Index");
+        }
 
         public IActionResult GetData(string id)
         {

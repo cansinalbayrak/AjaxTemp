@@ -1,7 +1,7 @@
 ﻿@model List<Example>
 
 
-<table class="grid table" id="ExList">
+<table class="grid table mt-4" id="ExList">
     <tr>
         <th>ıd</th>
         <th>Name</th>
@@ -15,12 +15,10 @@
             <td>@item.Id</td>
             <td>@item.Name</td>
             <td>@item.Price</td>
-            <td><a class="details btn btn-success">Example Modal</a></td>
+            <td><a class="details btn btn-success">Get Example</a></td>
         </tr>
     }
 </table>
-
-
 
 
 <div class="modal fade" id="partialModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
